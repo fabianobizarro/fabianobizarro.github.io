@@ -1,0 +1,21 @@
+{
+  "name": "fabianobizarro.github.io",
+  "homepage": "https://github.com/fabianobizarro/fabianobizarro.github.io",
+  "authors": [
+    "Fabiano Bizarro <fabiano.bizarro@outlook.com>"
+  ],
+  "description": "Meu portifólio pessoal",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0"
+  }
+}
