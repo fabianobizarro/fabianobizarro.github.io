@@ -4,7 +4,7 @@
   "authors": [
     "Fabiano Bizarro <fabiano.bizarro@outlook.com>"
   ],
-  "description": "Meu portifólio pessoal",
+  "description": "My personal page",
   "main": "index.html",
   "moduleType": [],
   "license": "MIT",
@@ -16,6 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.5.0"
+    "angular": "~1.5.0",
+    "angular-translate": "^2.11.0",
+    "angular-translate-loader-static-files": "^2.11.0"
   }
 }
