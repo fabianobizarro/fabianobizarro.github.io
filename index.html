@@ -1,14 +1,15 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Fabiano Bizarro - Desenvolvedor</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<html ng-app="portfolio">
 
-		<script>
+<head>
+	<title>Fabiano Bizarro - Desenvolvedor</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+	<!--<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -17,202 +18,210 @@
 		  ga('create', 'UA-75942739-1', 'auto');
 		  ga('send', 'pageview');
 
-		</script>
+		</script>-->
 
-	</head>
-	<body>
+</head>
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/me2.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Fabiano Bizarro</a></h1>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">Sobre</a></li>
-						<li><a href="#two">Habilidades</a></li>
-						<li><a href="#three">Educação</a></li>
-						<li><a href="#four">Experiência de trabalho</a></li>
-						<li><a href="#five">Projetos</a></li>
-            <li><a href="#six">Contato</a></li>
+<body data-ng-controller="mainCtrl">
+
+	<!-- Header -->
+	<section id="header">
+		<header>
+			<span class="image avatar"><img src="assets/images/me2.jpgg" alt="" /></span>
+			<h1 id="logo"><a href="#">Fabiano Bizarro</a></h1>
+		</header>
+		<nav id="nav">
+			<ul>
+				<li><a href="#one" class="active" translate="MENU.SOBRE">Sobre</a></li>
+				<li><a href="#two" translate="MENU.HABILIDADES">Habilidades</a></li>
+				<li><a href="#three" translate="MENU.EDUCACAO">Educação</a></li>
+				<li><a href="#four" translate="MENU.JOBEXP">Experiência de trabalho</a></li>
+				<li><a href="#five" translate="MENU.PROJETOS">Projetos</a></li>
+				<li><a href="#six" translate="MENU.CONTATO">Contato</a></li>
+			</ul>
+		</nav>
+		<footer>
+			<ul class="icons">
+				<li><a href="https://www.facebook.com/fabianobzarro" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="https://github.com/fabianobizarro" class="icon fa-github"><span class="label">Github</span></a></li>
+				<li><a href="https://www.linkedin.com/in/fabianobizarro" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+			</ul>
+			<ul class="icons">
+				<li style="cursor:pointer" data-ng-click="changeLanguage('pt_BR')"><img src="assets/images/Brazil.png" /></li>
+				<li style="cursor:pointer"><img src="assets/images/United-States.png" ng-click="changeLanguage('en_US')" /></li>
+			</ul>
+		</footer>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- One - Sobre -->
+			<section id="one">
+				<div class="container">
+					<header class="major">
+						<h2>Fabiano Bizarro</h2>
+						<p translate="PROFISSAO">
+							Desenvolvedor
+						</p>
+					</header>
+				</div>
+			</section>
+			<!-- Two - Habilidades -->
+			<section id="two">
+				<div class="container">
+					<h3 translate="MENU.HABILIDADES">Habilidades</h3>
+
+					<ul class="feature-icons">
+						<li class="fa-code">
+							<p>
+								<strong translate="HABILIDADES.LINGPROG">Linguagens de programação</strong><br> C#, Javascript <br/> {{ 'HABILIDADES.CONHECIMETNOBASICO'
+								| translate }} : PHP, Ruby
+							</p>
+						</li>
+						<li class="fa-database">
+							<p>
+								<strong translate="HABILIDADES.BANCODEDADOS">Banco de dados</strong><br> MongoDB, SQL Server, MySQL
+							</p>
+						</li>
+						<li class="fa-cubes">
+							<p>
+								<strong translate="HABILIDADES.PLATAFORMAS">Plataformas</strong><br> .NET, ASP .NET, Node.js
+							</p>
+						</li>
+						<li class="fa-cogs">
+							<p>
+								<strong>Frameworks</strong><br> ASP .NET MVC, Windows Forms<br> Entity Framework <br> jQuery, Bootstrap <br> AngularJS,
+								Express JS
+							</p>
+						</li>
 					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://www.facebook.com/fabianobzarro" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="https://github.com/fabianobizarro" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://www.linkedin.com/in/fabianobizarro" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					</ul>
-				</footer>
+				</div>
+			</section>
+			<!-- Three - Educação -->
+			<section id="three">
+				<div class="container">
+					<h3 translate="MENU.EDUCACAO">Educação</h3>
+					<div>
+						<article>
+							<div>
+								<h5 translate="EDU_0.TIPO">Ensino Superior</h5>
+								<p>
+									{{ 'EDU_0.NOME' | translate }} <br/> {{ 'EDU_0.CURSO' | translate }} <br/> {{ 'EDU_0.DATA' | translate }} </p>
+							</div>
+						</article>
+						<article>
+							<div>
+								<h5 translate="EDU_1.TIPO">Ensino Médio/Técnico</h5>
+								<p>
+									{{ 'EDU_1.NOME' | translate }} <br/> {{ 'EDU_1.CURSO' | translate }} <br/> {{ 'EDU_1.DATA' | translate }} </p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- Four - Exp. Trabalho -->
+			<section id="four">
+				<div class="container">
+					<h3 translate="MENU.JOBEXP">Experiência de trabalho</h3>
+					<br/>
+					<div class="features">
+						<article>
+							<div>
+								<h4 translate="JOBEXP_0.EMPRESA">UBEC - União Brasiliense de Educação e Cultura</h4>
+								<h4 translate="JOBEXP_0.FUNCAO">Programador</h4>
+								<h5 translate="JOBEXP_0.PERIODO">Maio/2014 - Presente</h5>
+								<p translate="JOBEXP_0.DESCRICAO">
+									Análise e desenvolvimento de sistemas para as instituições mantidas; migração de sistemas antigos. Desenvolvimento em ASP
+									.NET, linguagem C#.
+								</p>
+							</div>
+						</article>
+						<article>
+							<div>
+								<h4 translate="JOBEXP_1.EMPRESA">ICONE - Inoue Consultoria e Engenharia</h4>
+								<h4 translate="JOBEXP_1.FUNCAO">Assistente Técnico em informática</h4>
+								<h5 translate="JOBEXP_1.PERIODO">Dezembro/2012 – Maio/2014 </h5>
+								<p translate="JOBEXP_1.DESCRICAO">
+									Suporte na área de informática, manutenção em computadores, gerenciamento do servidor, desenvolvimento de softwares para
+									a empresa.
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- Five - Projetos -->
+			<section id="five">
+				<div class="container">
+					<h3 translate="MENU.PROJETOS">Projetos</h3>
+					<br/>
+					<div class="features">
+						<article>
+							<a href="https://github.com/ShareNews" class="image" style="width:30%">
+								<img src="assets/images/sharenews.png" alt="ShareNews" style="height:200px !important; width:200px !important;" />
+							</a>
+							<div class="inner">
+								<h4 translate="PROJETOS_0.NOME">ShareNews</h4>
+								<p translate="PROJETOS_0.DESCRICAO">Meu projeto de TCC da faculdade. É uma plataforma de compartilhamento de notícias entre a faculdade e os alunos.
+									Atualmente está em fase de desenvolvimento</p>
+								<p>
+									<a href="https://github.com/ShareNews" target="_blank" translate="PROJETOS_0.PAGE">Página do projeto</a>
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- Six - Contato -->
+			<section id="six">
+				<div class="container">
+					<h3 translate="MENU.CONTATO">Contato</h3>
+					<p>
+						<i class="fa fa-home"></i> Ipatinga - MG <br>
+						<strong>Telefone: </strong> +55 (31) 97571-3366 <br>
+						<strong>Email: </strong> fabiano.bizarro@outlook.com | fabinoasbizarro@gmail.com <br>
+						<strong>Github: </strong><a href="https://github.com/fabianobizarro">https://github.com/fabianobizarro</a> <br>
+						<strong>Facebook: </strong><a href="https://www.facebook.com/fabianobzarro">https://www.facebook.com/fabianobzarro</a><br>
+						<strong>LinkeInd: </strong><a href="https://www.linkedin.com/in/fabianobizarro">https://www.linkedin.com/in/fabianobizarro</a><br>
+					</p>
+				</div>
 			</section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		</div>
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One - Sobre -->
-							<section id="one">
-								<div class="container">
-									<header class="major">
-										<h2>Fabiano Bizarro</h2>
-										<p>
-											Desenvolvedor
-										</p>
-									</header>
-								</div>
-							</section>
-						<!-- Two - Habilidades -->
-							<section id="two">
-								<div class="container">
-									<h3>Habilidades</h3>
-
-									<ul class="feature-icons">
-										<li class="fa-code">
-											<p>
-												<strong>Linguagens de programação</strong><br>
-												C#, Javascript <br/>
-
-												Conhecimento básico: PHP, Ruby
-											</p>
-										</li>
-										<li class="fa-database">
-											<p>
-												<strong>Banco de dados</strong><br>
-												MongoDB, SQL Server, MySQL
-											</p>
-										</li>
-										<li class="fa-cubes">
-											<p>
-												<strong>Plataformas</strong><br>
-												.NET, ASP .NET, Node.js
-											</p>
-										</li>
-										<li class="fa-cogs">
-											<p>
-												<strong>Frameworks</strong><br>
-												ASP .NET MVC, Windows Forms<br>
-												Entity Framework <br>
-												jQuery, Bootstrap <br>
-												AngularJS, Express JS
-											</p>
-										</li>
-									</ul>
-								</div>
-							</section>
-						<!-- Three - Educação -->
-							<section id="three">
-								<div class="container">
-									<h3>Educação</h3>
-									<div>
-										<article>
-											<div>
-												<h5>Ensino Superior</h5>
-												<p>
-													Centro Universitário do Leste de Minas Gerais - Unileste MG <br/>
-													Curso: Sistemas de Informação <br/>
-													7º Período - 2016/1</p>
-											</div>
-										</article>
-										<article>
-											<div>
-												<h5>Ensino Médio/Técnico</h5>
-												<p>
-													Escola Técnica JK <br/>
-													Curso técnico: Informática Industrial <br/>
-													2009 - 2012</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
-						<!-- Four - Exp. Trabalho -->
-							<section id="four">
-								<div class="container">
-									<h3>Experiência de trabalho</h3>
-									<br/>
-									<div class="features">
-										<article>
-											<div>
-												<h4>UBEC - União Brasiliense de Educação e Cultura</h4>
-												<h4>Programador</h4>
-												<h5>Maio/2014 - Presente</h5>
-												<p>
-													Análise e desenvolvimento de sistemas para as instituições mantidas; migração de sistemas antigos.
-													Desenvolvimento em ASP .NET, linguagem C#.
-												</p>
-											</div>
-										</article>
-										<article>
-											<div>
-												<h4>ICONE - Inoue Consultoria e Engenharia</h4>
-												<h4>Assistente Técnico em informática</h4>
-												<h5>Dezembro/2012 – Maio/2014 </h5>
-												<p>Suporte na área de informática, manutenção em computadores, gerenciamento do servidor, desenvolvimento de softwares para a empresa.</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
-						<!-- Five - Projetos -->
-							<section id="five">
-								<div class="container">
-									<h3>Projetos</h3>
-									<br/>
-									<div class="features">
-										<article>
-											<a href="https://github.com/ShareNews" class="image" style="width:30%">
-												<img src="images/sharenews.png" alt="ShareNews" style="height:200px !important; width:200px !important;"/>
-											</a>
-											<div class="inner">
-												<h4>ShareNews</h4>
-												<p>Meu projeto de TCC da faculdade. É uma plataforma de compartilhamento de notícias entre a faculdade e os alunos. Atualmente está em fase de desenvolvimento</p>
-												<p>
-													<a href="https://github.com/ShareNews" target="_blank">Página do projeto</a>
-												</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
-						<!-- Six - Contato -->
-							<section id="six">
-								<div class="container">
-									<h3>Contato</h3>
-										<p>
-											<strong>Localização: </strong> Ipatinga - MG<br>
-											<strong>Telefone: </strong> (31) 97571-3366 <br>
-											<strong>Email: </strong> fabiano.bizarro@outlook.com | fabinoasbizarro@gmail.com <br>
-											<strong>Github: </strong><a href="https://github.com/fabianobizarro">https://github.com/fabianobizarro</a> <br>
-											<strong>Facebook: </strong><a href="https://www.facebook.com/fabianobzarro">https://www.facebook.com/fabianobzarro</a><br>
-											<strong>LinkeInd: </strong><a href="https://www.linkedin.com/in/fabianobizarro">https://www.linkedin.com/in/fabianobizarro</a><br>
-										</p>
-								</div>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
-
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container">
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-translate/angular-translate.min.js"></script>
+	<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+	<script src="app/app.js"></script>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollzer.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+
+
+
+</body>
+
 </html>
