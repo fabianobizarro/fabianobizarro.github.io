@@ -1,0 +1,20 @@
+.circle {
+    border-radius: 50%;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.photo-section {
+    margin-top: 10px;
+}
+
+.photo-section figure {
+    margin-bottom: 10px;
+}
+
+.info a {
+    color: #000000 !important;
+    border-bottom: 0px !important;
+}

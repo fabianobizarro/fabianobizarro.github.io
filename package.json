@@ -16,5 +16,9 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-uglify": "^1.5.3"
+  },
+  "dependencies": {
+    "bulma": "^0.2.1",
+    "font-awesome": "^4.6.3"
   }
 }
