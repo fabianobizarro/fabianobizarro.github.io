@@ -1,13 +1,17 @@
 {
   "name": "fabianobizarro.github.io",
   "version": "1.0.0",
-  "description": "Meu portólio pessoa",
+  "description": "Meu portólio pessoal",
   "main": "index.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fabianobizarro/fabianobizarro.github.io.git"
   },
-  "author": "",
+  "scripts": {
+    "watch": "live-server --port=8000 .",
+    "build": "gulp"
+  },
+  "author": "Fabiano Bizarro",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fabianobizarro/fabianobizarro.github.io/issues"
@@ -15,7 +19,8 @@
   "homepage": "https://github.com/fabianobizarro/fabianobizarro.github.io#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-uglify": "^1.5.3"
+    "gulp-uglify": "^1.5.3",
+    "live-server": "^1.1.0"
   },
   "dependencies": {
     "bulma": "^0.2.1",
