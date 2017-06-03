@@ -21,6 +21,16 @@
 
 ul.no-point li {
     list-style-type: none;
+}
+
+#contact {
+    padding-top: 10px;
+}
+
+#contact a {
+    color: inherit;
+    padding-right: 10px;
+    padding-left: 10px;
 }/*! bulma.io v0.2.3 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {

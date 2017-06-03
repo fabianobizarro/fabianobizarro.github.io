@@ -11,7 +11,12 @@ import BaseInfo from './app/BaseInfo';
 import Tabs from './app/Tabs';
 import Footer from './app/Footer';
 
-const App = () => {
+import gs from './app/globalState';
+
+const App = (props) => {
+    
+    gs.lang = props.lang;
+
     return (
         <div>
             <Menu />
@@ -22,4 +27,7 @@ const App = () => {
     )
 }
 
-ReactDOM.render(<App />, document.getElementById("container"));
+let containerElement = document.getElementById("container");
+let lang = containerElement.getAttribute('lang');
+
+ReactDOM.render(<App lang={lang} />, containerElement);

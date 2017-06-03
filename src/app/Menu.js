@@ -3,16 +3,20 @@ import React, { Component } from 'react';
 class Menu extends Component {
 
 
-    constructor(props){
+    constructor(props) {
         super(props);
 
         this.state = {
             urlCV_enUS: 'https://goo.gl/V5UwnC',
-            urlCV_ptBR: 'https://goo.gl/JpW1vw'
+            urlCV_ptBR: 'https://goo.gl/JpW1vw',
+            menuOpened: false
         }
+
+        this.onMenuClick = this.onMenuClick.bind(this);
     }
 
     render() {
+        console.log("rend")
         return (
             <nav className="nav has-shadow">
                 <div className="nav-left">
@@ -21,13 +25,13 @@ class Menu extends Component {
                     </a>
                 </div>
 
-                <span className="nav-toggle" id="menuTogggle">
+                <span className={"nav-toggle " + (this.state.menuOpened ? "is-active" : "")} id="menuTogggle" onClick={this.onMenuClick}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </span>
 
-                <div className="nav-right nav-menu menu-options">
+                <div className={"nav-right nav-menu menu-options " + (this.state.menuOpened ? "is-active" : "")}>
                     <a className="nav-item" href="en-us.html">
                         Resume in English MUDAR AQUI
                     </a>
@@ -49,6 +53,12 @@ class Menu extends Component {
                 </div>
             </nav>
         );
+    }
+
+    onMenuClick() {
+        this.setState((prev) => {
+            return { menuOpened: !prev.menuOpened }
+        });
     }
 }
 

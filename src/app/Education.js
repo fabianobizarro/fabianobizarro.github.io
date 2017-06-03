@@ -4,12 +4,12 @@ class Education extends Component {
 
     render() {
         return (
-            <div className="box">
+            <div className="animated fadeIn" style={{ paddingTop: "10px" }}>
                 <article className="media">
 
                     <div className="media-content">
 
-                        <div className="content">
+                        <div className="content is-medium">
 
                             <p>
                                 Graduação

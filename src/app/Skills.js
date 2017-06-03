@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 
 class Skills extends Component {
-    
+
+
+    constructor(props) {
+        super(props);
+
+        this.state = {}
+    }
+
+
     render() {
         return (
-            <div className="box animated fadeIn">
+            <div className="animated fadeIn" style={{ paddingTop: "10px" }}>
                 <article className="media">
 
                     <div className="media-content">
 
-                        <div className="content">
+                        <div className="content is-medium">
 
                             <div className="columns">
                                 <div className="column">
@@ -61,7 +69,7 @@ class Skills extends Component {
                         </div>
                     </div>
                 </article>
-            </div>    
+            </div>
         );
     }
 }

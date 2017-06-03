@@ -4,32 +4,36 @@ import Education from './Education';
 import Skills from './Skills';
 import Experience from './Experience';
 
+import gs from './globalState';
+
 class Tabs extends Component {
 
     constructor(props) {
         super(props)
 
         this.state = {
-            selectedTab: 'education',
+            selectedTab: 'exp',
             tabs: [
-                // {
-                //     type: 'education',
-                //     text: {
-                //         'ptBR': 'Educação',
-                //         'enUS': 'Education'
-                //     }
-                // }                
-                {
-                    type: 'education',
-                    text: 'Educação'
-                },
                 {
                     type: 'exp',
-                    text: 'Experiência'
+                    text: {
+                        'pt-br': 'Experiência',
+                        'en-us': 'Experience'
+                    }
+                },
+                {
+                    type: 'education',
+                    text: {
+                        'pt-br': 'Educação',
+                        'en-us': 'Education'
+                    }
                 },
                 {
                     type: 'skills',
-                    text: 'Habilidades'
+                    text: {
+                        'pt-br': 'Habilidades',
+                        'en-us': 'Skills'
+                    }
                 }
             ]
         }
@@ -41,23 +45,21 @@ class Tabs extends Component {
         return (
             <section className="section">
                 <div className="container">
-                    <div className="tabs is-medium">
+                    <div className="tabs is-medium is-fullwidth">
                         <ul>
-                            <li className="is-active" >
-                                <a onClick={e => this.selectTab('education')}>
-                                    Educação
-                                </a>
-                            </li>
-                            <li>
-                                <a onClick={e => this.selectTab('exp')}>
-                                    Experiências
-                                </a>
-                            </li>
-                            <li>
-                                <a onClick={e => this.selectTab('skills')}>
-                                    Habilidades
-                                </a>
-                            </li>
+                            {
+                                this.state.tabs.map(t => {
+
+                                    return (
+                                        <li className={this.isTabSelected(t.type) ? "is-active" : ""} key={t.type}>
+                                            <a onClick={e => this.selectTab(t.type)}>
+                                                {t.text[gs.lang]}
+                                            </a>
+                                        </li>
+                                    )
+
+                                })
+                            }
                         </ul>
                     </div>
                     <div classID="tab-content">
@@ -81,12 +83,11 @@ class Tabs extends Component {
         }
     }
 
-    isTabSelected(target) {
+    isTabSelected(name) {
         return name === this.state.selectedTab;
     }
 
     selectTab(name) {
-        console.log(name);
         this.setState({ selectedTab: name });
     }
 }

@@ -1,65 +1,37 @@
 import React, { Component } from 'react';
 
+import gs from './globalState';
+
 class Contact extends Component {
 
     render() {
+        console.log(gs);
+
         return (
-            <div classID="contact">
-                <article className="media" classID="contact">
-                    <div className="media-content">
-                        <div className="content info">
+            <div classID="contact" id="contact">
+                <div className="container has-text-centered">
 
-                            <div className="columnsr">
-                                {/*<div className="column">
-                                    <ul className="no-point">
-                                        
-                                        <li>
-                                            <span className="icon">
-                                                <i className="fa fa-phone"></i>
-                                            </span> (31) 99904-3366
-                                        </li>
-                                    </ul>
-                                </div>*/}
-                                <div className="columnr">
-                                    <ul className="no-point">
-                                        <li>
-                                            <span className="icon">
-                                                <i className="fa fa-home"></i>
-                                            </span> Ipatinga, MG, Brasil
-                                        </li>
-                                        <li>
-                                            <span className="icon">
-                                                <i className="fa fa-envelope"></i>
-                                            </span>
-                                            <a href="mailto:fabianobizarro@outlook.com" target="_blank">fabianobizarro@outlook.com</a>
-                                        </li>
-                                        <li>
-                                            <span className="icon">
-                                                <i className="fa fa-globe"></i>
-                                            </span>
-                                            <a href="https://fabianobizarro.github.io">fabianobizarro.github.io</a>
-                                        </li>
-                                        <li>
-                                            <span className="icon">
-                                                <i className="fa fa-github"></i>
-                                            </span>
-                                            <a href="https://github.com/fabianobizarro" target="_blank">fabianobizarro</a>
-                                        </li>
-                                        <li> <span className="icon">
-                                            <i className="fa fa-linkedin"></i>
-                                        </span>
-                                            <a href="https://www.linkedin.com/in/fabianobizarro" target="_blank">LinkedIn</a>
-                                        </li>
+                    <a href="mailto:fabianobizarro@outlook.com" target="_blank">
+                        <i className="fa fa-envelope fa-2x"></i>
+                    </a>
 
-                                    </ul>
+                    <a href="https://fabianobizarro.github.io">
+                        <i className="fa fa-globe fa-2x"></i>
+                    </a>
 
-                                </div>
-                            </div>
+                    <a href="https://github.com/fabianobizarro" target="_blank">
+                        <i className="fa fa-github fa-2x"></i>
+                    </a>
 
-                        </div>
-                    </div>
-                </article>
+                    <a href="https://twitter.com/fabianobizarro" target="_blank">
+                        <i className="fa fa-twitter fa-2x"></i>
+                    </a>
 
+                    <a href="https://www.linkedin.com/in/fabianobizarro" target="_blank">
+                        <i className="fa fa-linkedin fa-2x"></i>
+                    </a>
+
+                </div>
             </div>
         );
     }
