@@ -1,0 +1,42 @@
+{
+    "pt-br": [
+        {
+            "title": "Analista Desenvolvedor",
+            "company": "Todos Empreendimentos",
+            "period": "Março/2017 - Atualmente",
+            "description": ""
+        },
+        {
+            "title": "Programador",
+            "company": "UBEC - União Brasiliense de Educação e Cultura",
+            "period": "Maio/2014 - Março/2017",
+            "description": "Atividades: Análise e desenvolvimento de sistemas para as instituições mantidas; migração de sistemas antigos. Desenvolvimento dos software na plataforma ASP .NET MVC e C#."
+        },
+        {
+            "title": "Assitente Técnico de TI",
+            "company": "ICONE Consultoria e Engenharia ",
+            "period": "Dezembro/2013 - Maio/2014",
+            "description": "Atividades: Suporte na área de informática, manutenção em computadores, gerenciamento do servidor, desenvolvimento de softwares para a empresa."
+        }
+    ],
+    "en-us": [
+        {
+            "title": "Analyst Developer",
+            "company": "Todos Empreendimentos",
+            "period": "March/2017 - Current",
+            "description": ""
+        },
+        {
+            "title": "Developer",
+            "company": "UBEC - União Brasiliense de Educação e Cultura",
+            "period": "May/2014 - March/2017",
+            "description": ""
+        },
+        {
+            "title": "IT Technical Assistant ",
+            "company": "ICONE Consultoria e Engenharia ",
+            "period": "November/2013 - May/2014",
+            "description": ""
+        }
+    ]
+}

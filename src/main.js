@@ -1,33 +1,32 @@
-// import the base sass file
-import './style.css';
-import 'bulma';
-import 'animate.css';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Menu from './app/Menu';
-import BaseInfo from './app/BaseInfo';
-import Tabs from './app/Tabs';
-import Footer from './app/Footer';
+import { Provider } from 'react-redux'
+import store, { changeLanguage } from './store';
 
-import gs from './app/globalState';
+import './style/style.css';
+import './style/style.sass';
+import 'animate.css';
 
-const App = (props) => {
-    
-    gs.lang = props.lang;
+import Menu from './Components/Menu';
+import BaseInfo from './Components/BaseInfo';
+import Tabs from './Components/Tabs';
+import Footer from './Components/Footer';
 
-    return (
-        <div>
-            <Menu />
-            <BaseInfo />
-            <Tabs />
-            <Footer />
-        </div>
-    )
-}
+const App = () => (
+    <div>
+        <Menu />
+        <BaseInfo />
+        <Tabs />
+        {/* <Footer /> */}
+    </div>
+)
 
 let containerElement = document.getElementById("container");
 let lang = containerElement.getAttribute('lang');
 
-ReactDOM.render(<App lang={lang} />, containerElement);
+store.dispatch(changeLanguage(lang));
+
+ReactDOM.render(<Provider store={store}>
+    <App />
+</Provider>, containerElement);

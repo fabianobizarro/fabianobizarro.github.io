@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Education from './Education/Education';
+import Skills from './Skills/Skills';
+import Experience from './Experience/Experience';
 
-import Education from './Education';
-import Skills from './Skills';
-import Experience from './Experience';
-
-import gs from './globalState';
-
-class Tabs extends Component {
+export class Tabs extends Component {
 
     constructor(props) {
         super(props)
@@ -53,7 +51,7 @@ class Tabs extends Component {
                                     return (
                                         <li className={this.isTabSelected(t.type) ? "is-active" : ""} key={t.type}>
                                             <a onClick={e => this.selectTab(t.type)}>
-                                                {t.text[gs.lang]}
+                                                {t.text[this.props.lang]}
                                             </a>
                                         </li>
                                     )
@@ -92,4 +90,10 @@ class Tabs extends Component {
     }
 }
 
-export default Tabs;
+const mapState = (state) => ({
+    lang: state
+})
+
+const Container = connect(mapState)(Tabs);
+
+export default Container;

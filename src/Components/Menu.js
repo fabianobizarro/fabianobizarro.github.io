@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class Menu extends Component {
-
+export class Menu extends Component {
 
     constructor(props) {
         super(props);
@@ -16,7 +16,6 @@ class Menu extends Component {
     }
 
     render() {
-        console.log("rend")
         return (
             <nav className="nav has-shadow">
                 <div className="nav-left">
@@ -32,9 +31,20 @@ class Menu extends Component {
                 </span>
 
                 <div className={"nav-right nav-menu menu-options " + (this.state.menuOpened ? "is-active" : "")}>
-                    <a className="nav-item" href="en-us.html">
-                        Resume in English MUDAR AQUI
-                    </a>
+
+                    {
+                        
+                        this.props.lang === 'pt-br'
+                            ?
+                            <a className="nav-item" href="en-us.html">
+                                Resume in English
+                            </a>
+                            :
+                            <a className="nav-item" href="index.html">
+                                CV in Portuguese
+                            </a>
+                    }
+
 
                     <span className="nav-item">
                         <a className="button is-info" href={this.state.urlCV_enUS} target="_blank">
@@ -62,4 +72,10 @@ class Menu extends Component {
     }
 }
 
-export default Menu;
+const mapState = (state) => ({
+    lang: state
+});
+
+const Container = connect(mapState)(Menu);
+
+export default Container;
