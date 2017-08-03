@@ -1,0 +1,102 @@
+{
+    "pt-br": [
+        {
+            "title": "Idiomas",
+            "items": [
+                "Portugês (Nativo)",
+                "Inglês (Intermediário)"
+            ]
+        },
+        {
+            "title": "Linguagens de Programação",
+            "items": [
+                "C#",
+                "Javascript"
+            ]
+        },
+        {
+            "title": "Banco de Dados",
+            "items": [
+                "SQL Server",
+                "MySQL",
+                "MongoDB"
+            ]
+        },
+        {
+            "title": "Front-End",
+            "items": [
+                "Angular",
+                "React",
+                "jQuery"
+            ]
+        },
+        {
+            "title": "Plataformas",
+            "items": [
+                "ASP .NET",
+                "Node.js",
+                "Docker"
+            ]
+        },
+        {
+            "title": "Frameworks",
+            "items": [
+                "ASP .NET MVC",
+                "Windows Forms",
+                "Express.js",
+                "Entity Framework",
+                "Ionic"
+            ]
+        }
+    ],
+    "en-us": [
+        {
+            "title": "Languages",
+            "items": [
+                "Portugês (Native)",
+                "Inglês (Intermediate)"
+            ]
+        },
+        {
+            "title": "Programming Languages",
+            "items": [
+                "C#",
+                "Javascript"
+            ]
+        },
+        {
+            "title": "Databases",
+            "items": [
+                "SQL Server",
+                "MySQL",
+                "MongoDB"
+            ]
+        },
+        {
+            "title": "Front-End",
+            "items": [
+                "Angular",
+                "React",
+                "jQuery"
+            ]
+        },
+        {
+            "title": "Platforms",
+            "items": [
+                "ASP .NET",
+                "Node.js",
+                "Docker"
+            ]
+        },
+        {
+            "title": "Frameworks",
+            "items": [
+                "ASP .NET MVC",
+                "Windows Forms",
+                "Express.js",
+                "Entity Framework",
+                "Ionic"
+            ]
+        }
+    ]
+}
