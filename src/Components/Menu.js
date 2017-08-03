@@ -7,8 +7,8 @@ export class Menu extends Component {
         super(props);
 
         this.state = {
-            urlCV_enUS: 'https://goo.gl/V5UwnC',
-            urlCV_ptBR: 'https://goo.gl/JpW1vw',
+            urlCV_enUS: 'https://goo.gl/M2D8ax',
+            urlCV_ptBR: 'https://goo.gl/DaJRVJ',
             menuOpened: false
         }
 
@@ -17,49 +17,57 @@ export class Menu extends Component {
 
     render() {
         return (
-            <nav className="nav has-shadow">
-                <div className="nav-left">
-                    <a className="nav-item is-brand" href="#">
+            <nav className="navbar has-shadow">
+                <div className="navbar-brand">
+                    <a className="navbar-item" href="#">
                         Fabiano Bizarro
                     </a>
+
+                    <div className={"navbar-burger burger " + (this.state.menuOpened ? "is-active" : "")} id="menuTogggle" onClick={this.onMenuClick}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
 
-                <span className={"nav-toggle " + (this.state.menuOpened ? "is-active" : "")} id="menuTogggle" onClick={this.onMenuClick}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
+                <div className={"navbar-menu " + (this.state.menuOpened ? "is-active" : "")}>
 
-                <div className={"nav-right nav-menu menu-options " + (this.state.menuOpened ? "is-active" : "")}>
+                    <div className="navbar-end">
+                        {
+                            this.props.lang === 'pt-br'
+                                ?
+                                <a className="navbar-item is-hidden-desktop-only" href="en-us.html">
+                                    Resume in English
+                                </a>
+                                :
+                                <a className="navbar-item is-hidden-desktop-only" href="index.html">
+                                    CV in Portuguese
+                                </a>
+                        }
+                        <div className="navbar-item">
+                            <div className="field is-grouped">
 
-                    {
-                        
-                        this.props.lang === 'pt-br'
-                            ?
-                            <a className="nav-item" href="en-us.html">
-                                Resume in English
-                            </a>
-                            :
-                            <a className="nav-item" href="index.html">
-                                CV in Portuguese
-                            </a>
-                    }
+                                <p className="control">
+                                    <a className="button is-primary" href={this.state.urlCV_ptBR} target="_blank">
+                                        <span className="icon">
+                                            <i className="fa fa-download"></i>
+                                        </span>
+                                        <span>CV - Português</span>
+                                    </a>
+                                </p>
+                                <p className="control">
+                                    <a className="button is-primary" href={this.state.urlCV_enUS} target="_blank">
+                                        <span className="icon">
+                                            <i className="fa fa-download"></i>
+                                        </span>
+                                        <span>CV - English</span>
+                                    </a>
+                                </p>
 
+                            </div>
+                        </div>
+                    </div>
 
-                    <span className="nav-item">
-                        <a className="button is-info" href={this.state.urlCV_enUS} target="_blank">
-                            <span className="icon">
-                                <i className="fa fa-download"></i>
-                            </span>
-                            <span>CV - English</span>
-                        </a>
-                        <a className="button is-info" href={this.state.urlCV_ptBR} target="_blank">
-                            <span className="icon">
-                                <i className="fa fa-download"></i>
-                            </span>
-                            <span>CV - Português</span>
-                        </a>
-                    </span>
                 </div>
             </nav>
         );

@@ -40,10 +40,11 @@ export class Tabs extends Component {
     }
 
     render() {
+        let { lang } = this.props;
         return (
             <section className="section">
-                <div className="container">
-                    <div className="tabs is-medium is-fullwidth">
+                <div className="container is-hidden-touch">
+                    <div className="tabs is-fullwidth is-medium">
                         <ul>
                             {
                                 this.state.tabs.map(t => {
@@ -51,7 +52,7 @@ export class Tabs extends Component {
                                     return (
                                         <li className={this.isTabSelected(t.type) ? "is-active" : ""} key={t.type}>
                                             <a onClick={e => this.selectTab(t.type)}>
-                                                {t.text[this.props.lang]}
+                                                {t.text[lang]}
                                             </a>
                                         </li>
                                     )
@@ -61,15 +62,28 @@ export class Tabs extends Component {
                         </ul>
                     </div>
                     <div classID="tab-content">
-                        {this.content()}
+                        {this.content(this.state.selectedTab)}
                     </div>
+                </div>
+                <div className="container is-hidden-desktop">
+                    {
+                        this.state.tabs.map((t, i) => {
+                            return (
+                                <div key={i}>
+                                    <h5 className="title"> {t.text[lang]} </h5>
+                                    {this.content(t.type)}
+                                    <hr />
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </section>
         );
     }
 
-    content() {
-        switch (this.state.selectedTab) {
+    content(type) {
+        switch (type) {
             case 'education':
                 return <Education />;
             case 'skills':

@@ -1,0 +1,10 @@
+{
+    "name": "FabianoBizarro",
+    "short_name": "fabianoBiz",
+    "start)url": ".",
+    "display": "standalone",
+    "description": "My personal portfólio",
+    "orientation": "portrait",
+    "theme_color": "#fff",
+    "background_color": "#fff"
+}

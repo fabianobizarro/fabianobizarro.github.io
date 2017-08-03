@@ -7,7 +7,7 @@ const TimeLineItem = ({ children }) => (
             <a href="#" className="timeline-icon"></a>
         </div>
         <div className="timeline-content">
-            <div className="level">
+            <div className="level" style={{ float: 'left' }}>
                 <div className="level-left">
                     <div className="level-item">
                         <div>

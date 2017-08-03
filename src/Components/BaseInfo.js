@@ -4,7 +4,7 @@ import Avatar from './Avatar';
 import Contact from './Contact';
 
 const BaseInfo = () =>
-    <section classID="baseInfo" className="section">
+    <section classID="baseInfo" className="section" style={{paddingBottom: 0}}>
         <div className="container">
             <Avatar />
             <Contact />

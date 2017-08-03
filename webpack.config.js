@@ -1,9 +1,16 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 const extractSass = new ExtractTextPlugin({
     filename: "style.css",
     disable: process.env.NODE_ENV === "development"
+});
+
+const jsPlugin = new webpack.DefinePlugin({
+    'process.env': {
+        NODE_ENV: JSON.stringify('production')
+    }
 });
 
 const config = {
@@ -46,7 +53,9 @@ const config = {
         ]
     },
     plugins: [
-        extractSass
+        extractSass,
+        jsPlugin,
+        new webpack.optimize.UglifyJsPlugin()
     ],
     devServer: {
         contentBase: path.join(__dirname),

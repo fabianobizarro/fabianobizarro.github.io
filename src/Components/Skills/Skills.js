@@ -22,7 +22,7 @@ const Skills = ({lang}) => {
                 <div className="media-content">
 
                     <div className="content is-medium">
-                        <div className="columns is-multiline is-mobile">
+                        <div className="columns is-multiline">
 
                             {
                                 skills[lang].map((s, i) => (

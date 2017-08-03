@@ -16,9 +16,11 @@ import Footer from './Components/Footer';
 const App = () => (
     <div>
         <Menu />
-        <BaseInfo />
-        <Tabs />
-        {/* <Footer /> */}
+        <section >
+            <BaseInfo />
+            <Tabs />
+            {/* <Footer /> */}
+        </section>
     </div>
 )
 
