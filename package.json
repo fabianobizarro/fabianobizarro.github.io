@@ -10,7 +10,9 @@
   "scripts": {
     "devserver": "webpack-dev-server --port 5000 --public --host 0.0.0.0",
     "build": "webpack",
-    "watch": "webpack -w"
+    "watch": "webpack -w",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Fabiano Bizarro",
   "license": "ISC",
@@ -39,9 +41,11 @@
     "redux": "^3.7.1",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
-    "webpack": "^2.5.1"
+    "webpack": "^2.5.1",
+    "snyk": "^1.42.6"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.4.5"
-  }
+  },
+  "snyk": true
 }
