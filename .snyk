@@ -20,3 +20,6 @@ patch:
         patched: '2018-06-19T07:15:14.746Z'
     - node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
         patched: '2018-06-19T07:15:14.746Z'
+  'npm:tunnel-agent:20170305':
+    - node-sass > request > tunnel-agent:
+        patched: '2018-06-26T07:15:57.357Z'
