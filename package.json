@@ -42,7 +42,7 @@
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
     "webpack": "^2.5.1",
-    "snyk": "^1.83.0"
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.4.5"
