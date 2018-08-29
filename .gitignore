@@ -5,3 +5,6 @@ bower_components
 
 # nodejs Modules
 node_modules
+
+# dist folder
+dist
