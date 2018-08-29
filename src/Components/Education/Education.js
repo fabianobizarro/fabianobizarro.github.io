@@ -28,7 +28,7 @@ export const Education = ({lang}) => (
 )
 
 const mapState = (state) => ({
-    lang: state
+    lang: state.lang
 });
 
 const Container = connect(mapState)(Education);

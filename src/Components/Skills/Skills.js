@@ -12,7 +12,6 @@ const SkillItem = ({ skill }) => (
     </p>
 )
 
-
 const Skills = ({lang}) => {
 
     return (
@@ -23,11 +22,10 @@ const Skills = ({lang}) => {
 
                     <div className="content is-medium">
                         <div className="columns is-multiline">
-
                             {
-                                skills[lang].map((s, i) => (
+                                skills[lang].map((skill, i) => (
                                     <div className="column is-6" key={i} >
-                                        <SkillItem skill={s} />
+                                        <SkillItem skill={skill} />
                                     </div>
                                 ))
                             }
@@ -40,7 +38,7 @@ const Skills = ({lang}) => {
 }
 
 const mapState = (state) => ({
-    lang: state
+    lang: state.lang
 });
 
 const Container = connect(mapState)(Skills);

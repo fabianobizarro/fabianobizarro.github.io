@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { Provider } from 'react-redux'
-import store, { changeLanguage } from './store';
+import store, { saveState } from './store';
+import { changeLanguage } from "./actions";
 
 import './style/style.css';
 import './style/style.sass';
@@ -19,13 +20,16 @@ const App = () => (
         <section >
             <BaseInfo />
             <Tabs />
-            {/* <Footer /> */}
         </section>
     </div>
 )
 
 let containerElement = document.getElementById("container");
 let lang = containerElement.getAttribute('lang');
+
+store.subscribe(()=>{
+    saveState(store.getState())
+});
 
 store.dispatch(changeLanguage(lang));
 
