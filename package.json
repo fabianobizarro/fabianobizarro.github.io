@@ -12,7 +12,8 @@
     "build": "webpack",
     "watch": "webpack -w",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
+    "lint": "./node_modules/.bin/eslint ."
   },
   "author": "Fabiano Bizarro",
   "license": "ISC",
@@ -47,7 +48,6 @@
   },
   "devDependencies": {
     "eslint": "^5.4.0",
-    "eslint-config-google": "^0.9.1",
     "eslint-plugin-react": "^7.11.1",
     "webpack-dev-server": "^2.4.5"
   },
