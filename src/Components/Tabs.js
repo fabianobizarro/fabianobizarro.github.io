@@ -100,7 +100,6 @@ export class Tabs extends Component {
     }
 
     selectTab(name) {
-        console.log('cvhange tab')
         this.props.selectTab(name);
     }
 }

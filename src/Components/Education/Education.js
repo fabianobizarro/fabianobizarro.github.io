@@ -3,8 +3,8 @@ import education from './education.json';
 import TimeLineItem from '../TimeLineItem';
 import { connect } from 'react-redux';
 
-export const Education = ({lang}) => (
-    <div className="animated fadeIn" style={{ paddingTop: "10px" }}>
+export const Education = ({ lang }) => (
+    <div className="animated fadeIn" style={{ paddingTop: '10px' }}>
         <article className="media">
 
             <div className="media-content">
@@ -23,12 +23,11 @@ export const Education = ({lang}) => (
                 </div>
             </div>
         </article>
-
     </div>
-)
+);
 
 const mapState = (state) => ({
-    lang: state.lang
+    lang: state.lang,
 });
 
 const Container = connect(mapState)(Education);

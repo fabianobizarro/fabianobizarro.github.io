@@ -12,7 +12,6 @@ import 'animate.css';
 import Menu from './Components/Menu';
 import BaseInfo from './Components/BaseInfo';
 import Tabs from './Components/Tabs';
-import Footer from './Components/Footer';
 
 const App = () => (
     <div>
@@ -22,7 +21,7 @@ const App = () => (
             <Tabs />
         </section>
     </div>
-)
+);
 
 let containerElement = document.getElementById("container");
 let lang = containerElement.getAttribute('lang');

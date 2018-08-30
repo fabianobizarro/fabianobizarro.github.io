@@ -28,6 +28,7 @@
     "babel-preset-react": "^6.24.1",
     "bulma": "^0.5.0",
     "css-loader": "^0.28.1",
+    "eslint-config-standard-react": "^7.0.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "font-awesome": "^4.6.3",
     "gulp": "^4.0.0",
@@ -40,11 +41,14 @@
     "react-redux": "^5.0.5",
     "redux": "^3.7.1",
     "sass-loader": "^6.0.5",
+    "snyk": "^1.85.0",
     "style-loader": "^0.17.0",
-    "webpack": "^2.5.1",
-    "snyk": "^1.85.0"
+    "webpack": "^2.5.1"
   },
   "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-react": "^7.11.1",
     "webpack-dev-server": "^2.4.5"
   },
   "snyk": true
