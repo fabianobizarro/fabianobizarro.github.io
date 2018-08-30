@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { selectTab } from "../actions";
 import Education from './Education/Education';
 import Skills from './Skills/Skills';
 import Experience from './Experience/Experience';
@@ -10,7 +11,6 @@ export class Tabs extends Component {
         super(props)
 
         this.state = {
-            selectedTab: 'exp',
             tabs: [
                 {
                     type: 'exp',
@@ -40,7 +40,7 @@ export class Tabs extends Component {
     }
 
     render() {
-        let { lang } = this.props;
+        let { lang, selectedTab } = this.props;
         return (
             <section className="section">
                 <div className="container is-hidden-touch">
@@ -62,7 +62,7 @@ export class Tabs extends Component {
                         </ul>
                     </div>
                     <div classID="tab-content">
-                        {this.content(this.state.selectedTab)}
+                        {this.content(selectedTab)}
                     </div>
                 </div>
                 <div className="container is-hidden-desktop">
@@ -96,18 +96,25 @@ export class Tabs extends Component {
     }
 
     isTabSelected(name) {
-        return name === this.state.selectedTab;
+        return name === this.props.selectedTab;
     }
 
     selectTab(name) {
-        this.setState({ selectedTab: name });
+        this.props.selectTab(name);
     }
 }
 
 const mapState = (state) => ({
-    lang: state
+    lang: state.lang,
+    selectedTab: state.selectedTab || 'exp'
 })
 
-const Container = connect(mapState)(Tabs);
+const mapDisptchToProps = (dispatch) => ({
+    selectTab: tabName => {
+        dispatch(selectTab(tabName))
+    }
+});
+
+const Container = connect(mapState, mapDisptchToProps)(Tabs);
 
 export default Container;

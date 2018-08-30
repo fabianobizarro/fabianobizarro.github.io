@@ -1,6 +1,12 @@
 {
     "pt-br": [
         {
+            "type": "Pós-Graduação",
+            "title": "Arquitetura de Software Distribuído",
+            "place": "Pontifícia Universidade Católica de Minas Gerais – PUC Minas",
+            "period": "2017 - 2019"
+        },
+        {
             "type": "Graduação",
             "title": "Bacharelado - Sistemas de Informação",
             "place": "Centro Universitário do Leste de Minas Gerais - Unileste MG",
@@ -15,7 +21,13 @@
     ],
     "en-us": [
         {
-            "type": "Degree",
+            "type": "Post-Graduation",
+            "title": "Distributed Software Architecture",
+            "place": "Pontifícia Universidade Católica de Minas Gerais – PUC Minas",
+            "period": "2017 - 2019"
+        },
+        {
+            "type": "Graduation",
             "title": "Bachelor - Information Systems ",
             "place": "Centro Universitário do Leste de Minas Gerais - Unileste MG",
             "period": "2013 - 2016"

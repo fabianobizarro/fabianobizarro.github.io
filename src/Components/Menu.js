@@ -81,7 +81,7 @@ export class Menu extends Component {
 }
 
 const mapState = (state) => ({
-    lang: state
+    lang: state.lang
 });
 
 const Container = connect(mapState)(Menu);
