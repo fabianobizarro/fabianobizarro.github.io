@@ -1,29 +1,41 @@
 {
     "pt-br": [
         {
+            "title": "Software Engineer",
+            "company": "Aurea Software",
+            "period": "junho/2018 - atualmente",
+            "description": ""
+        },
+        {
             "title": "Analista Desenvolvedor",
             "company": "Todos Empreendimentos",
-            "period": "Março/2017 - Atualmente",
+            "period": "março/2017 - junho/2018",
             "description": ""
         },
         {
             "title": "Programador",
             "company": "UBEC - União Brasiliense de Educação e Cultura",
-            "period": "Maio/2014 - Março/2017",
+            "period": "maio/2014 - março/2017",
             "description": "Atividades: Análise e desenvolvimento de sistemas para as instituições mantidas; migração de sistemas antigos. Desenvolvimento dos software na plataforma ASP .NET MVC e C#."
         },
         {
             "title": "Assitente Técnico de TI",
             "company": "ICONE Consultoria e Engenharia ",
-            "period": "Dezembro/2013 - Maio/2014",
+            "period": "dezembro/2013 - maio/2014",
             "description": "Atividades: Suporte na área de informática, manutenção em computadores, gerenciamento do servidor, desenvolvimento de softwares para a empresa."
         }
     ],
     "en-us": [
         {
+            "title": "Software Engineer",
+            "company": "Aurea Software",
+            "period": "June/2018 - Today",
+            "description": ""
+        },
+        {
             "title": "Analyst Developer",
             "company": "Todos Empreendimentos",
-            "period": "March/2017 - Current",
+            "period": "March/2017 - June/2018",
             "description": ""
         },
         {

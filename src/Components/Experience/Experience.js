@@ -10,7 +10,6 @@ export const Experience = ({ lang }) => (
         <article className="media">
 
             <div className="media-content">
-
                 <div className="content is-medium timeline">
                     {
                         experiences[lang].map((e, i) =>
@@ -28,11 +27,8 @@ export const Experience = ({ lang }) => (
     </div>
 );
 
-
-
-
 const mapState = (state) => ({
-    lang: state
+    lang: state.lang
 });
 
 const container = connect(mapState)(Experience);
