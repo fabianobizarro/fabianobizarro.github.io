@@ -7,8 +7,8 @@ export class Menu extends Component {
         super(props);
 
         this.state = {
-            urlCV_enUS: 'https://goo.gl/M2D8ax',
-            urlCV_ptBR: 'https://goo.gl/DaJRVJ',
+            urlCV_enUS: 'http://bit.ly/cv_fbizarro_en',
+            urlCV_ptBR: 'http://bit.ly/cv_fbizarro',
             menuOpened: false
         }
 
