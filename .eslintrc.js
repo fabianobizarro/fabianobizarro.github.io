@@ -1,13 +1,39 @@
 module.exports = {
-    "extends": ["google", "standard-react"],
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
     "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
-        }
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
     },
-    "rules":{
-        "indent": ["error", 4]
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": ["warn"]
     }
 };
