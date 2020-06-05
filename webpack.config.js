@@ -1,11 +1,7 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
-
-const extractSass = new ExtractTextPlugin({
-    filename: "style.css",
-    disable: process.env.NODE_ENV === "development"
-});
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const jsPlugin = new webpack.DefinePlugin({
     'process.env': {
@@ -14,7 +10,7 @@ const jsPlugin = new webpack.DefinePlugin({
 });
 
 const config = {
-
+    mode: 'production',
     entry: path.resolve(__dirname, 'src/main.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -31,38 +27,42 @@ const config = {
                 }
             },
             {
-                test: /\.json$/,
-                loader: 'json-loader'
-            },
-            {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    use: 'css-loader'
-                })
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
-                test: /(\.scss$|\.sass$)/,
-                use: extractSass.extract({
-                    use: [
-                        { loader: 'css-loader' },
-                        { loader: 'sass-loader' }
-                    ],
-                    fallback: 'style-loader'
-                })
+                test: /(\.sass$)/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
     },
     plugins: [
-        extractSass,
+        new MiniCssExtractPlugin(),
         jsPlugin,
-        new webpack.optimize.UglifyJsPlugin()
     ],
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                uglifyOptions: {
+                    compress: true,
+                    ecma: 6,
+                    mangle: true
+                },
+                sourceMap: true
+            }),
+        ]
+    },
     devServer: {
         contentBase: path.join(__dirname),
         compress: true,
         port: 5000
     }
-
 }
 
 module.exports = config;
