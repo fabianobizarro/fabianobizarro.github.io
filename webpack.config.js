@@ -1,11 +1,8 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
-
-const extractSass = new ExtractTextPlugin({
-    filename: "style.css",
-    disable: process.env.NODE_ENV === "development"
-});
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptmizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const jsPlugin = new webpack.DefinePlugin({
     'process.env': {
@@ -14,12 +11,20 @@ const jsPlugin = new webpack.DefinePlugin({
 });
 
 const config = {
-
+    mode: 'production',
     entry: path.resolve(__dirname, 'src/main.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: 'style.css',
+            esModule: true,
+            ignoreOrder: false,
+        }),
+        jsPlugin,
+    ],
     module: {
         rules: [
             {
@@ -31,38 +36,40 @@ const config = {
                 }
             },
             {
-                test: /\.json$/,
-                loader: 'json-loader'
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader'
+                ]
             },
             {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    use: 'css-loader'
-                })
-            },
-            {
-                test: /(\.scss$|\.sass$)/,
-                use: extractSass.extract({
-                    use: [
-                        { loader: 'css-loader' },
-                        { loader: 'sass-loader' }
-                    ],
-                    fallback: 'style-loader'
-                })
+                test: /(\.sass$)/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
     },
-    plugins: [
-        extractSass,
-        jsPlugin,
-        new webpack.optimize.UglifyJsPlugin()
-    ],
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                uglifyOptions: {
+                    compress: true,
+                    ecma: 6,
+                    mangle: true
+                },
+                sourceMap: true
+            }),
+            new OptmizeCSSAssetsPlugin({})
+        ]
+    },
     devServer: {
         contentBase: path.join(__dirname),
         compress: true,
         port: 5000
     }
-
 }
 
 module.exports = config;
