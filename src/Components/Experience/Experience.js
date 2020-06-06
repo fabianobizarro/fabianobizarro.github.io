@@ -14,9 +14,13 @@ export const Experience = ({ lang }) => (
                     {
                         experiences[lang].map((e, i) =>
                             <TimeLineItem key={i}>
-                                <p className="heading"> {e.period} </p>
-                                <p><strong> {e.title} </strong> </p>
-                                <p>{e.company}</p>
+                                <p className="heading">
+                                    {e.period}
+                                </p>
+                                <p>
+                                    <strong> {e.title} </strong> <br />
+                                    {e.company}
+                                </p>
                             </TimeLineItem>
                         )
                     }
