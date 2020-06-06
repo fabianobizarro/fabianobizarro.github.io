@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptmizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const jsPlugin = new webpack.DefinePlugin({
     'process.env': {
@@ -16,6 +17,14 @@ const config = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: 'style.css',
+            esModule: true,
+            ignoreOrder: false,
+        }),
+        jsPlugin,
+    ],
     module: {
         rules: [
             {
@@ -27,8 +36,9 @@ const config = {
                 }
             },
             {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader'
+                ]
             },
             {
                 test: /(\.sass$)/,
@@ -40,10 +50,6 @@ const config = {
             }
         ]
     },
-    plugins: [
-        new MiniCssExtractPlugin(),
-        jsPlugin,
-    ],
     optimization: {
         minimizer: [
             new UglifyJsPlugin({
@@ -56,6 +62,7 @@ const config = {
                 },
                 sourceMap: true
             }),
+            new OptmizeCSSAssetsPlugin({})
         ]
     },
     devServer: {
