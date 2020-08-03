@@ -1,9 +1,21 @@
 {
     "pt-br": [
         {
+            "title": "Arquiteto de Software",
+            "company": "TODOS Empreendimentos",
+            "period": "março/2020 - atualmente",
+            "description": ""
+        },
+        {
+            "title": "Analista Desenvolvedor",
+            "company": "TODOS Empreendimentos",
+            "period": "fevereiro/2019 - março/2020",
+            "description": ""
+        },
+        {
             "title": "Software Engineer",
             "company": "Aurea Software",
-            "period": "junho/2018 - atualmente",
+            "period": "junho/2018 - novembro/2018",
             "description": ""
         },
         {
@@ -27,9 +39,21 @@
     ],
     "en-us": [
         {
+            "title": "Software Architect",
+            "company": "TODOS Empreendimentos",
+            "period": "March/2020 - Today",
+            "description": ""
+        },
+        {
+            "title": "Analyst Developer",
+            "company": "TODOS Empreendimentos",
+            "period": "February/2019 - March/2020",
+            "description": ""
+        },
+        {
             "title": "Software Engineer",
             "company": "Aurea Software",
-            "period": "June/2018 - Today",
+            "period": "June/2018 - November/2018",
             "description": ""
         },
         {
