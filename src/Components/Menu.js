@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { changeLanguage } from '../actions';
 
 export class Menu extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export class Menu extends Component {
     };
 
     this.onMenuClick = this.onMenuClick.bind(this);
+    this.changeLanguage = this.changeLanguage.bind(this);
   }
 
   render() {
@@ -45,14 +47,17 @@ export class Menu extends Component {
             {this.props.lang === 'pt-br' ? (
               <a
                 className="navbar-item is-hidden-desktop-only"
-                href="en-us.html"
+                href="?lang=en-us"
+                data-lang="en-us"
               >
                 Resume in English
               </a>
             ) : (
               <a
                 className="navbar-item is-hidden-desktop-only"
-                href="index.html"
+                href="?lang=pt-br"
+                data-lang="pt-br"
+                // onClick={this.changeLanguage}
               >
                 CV in Portuguese
               </a>
@@ -64,6 +69,7 @@ export class Menu extends Component {
                     className="button is-primary"
                     href={this.state.urlCV_ptBR}
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <span className="icon">
                       <i className="fa fa-download"></i>
@@ -76,6 +82,7 @@ export class Menu extends Component {
                     className="button is-primary"
                     href={this.state.urlCV_enUS}
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <span className="icon">
                       <i className="fa fa-download"></i>
@@ -91,6 +98,11 @@ export class Menu extends Component {
     );
   }
 
+  changeLanguage(e) {
+    e.preventDefault();
+    this.props.changeLanguage(e.target.dataset.lang);
+  }
+
   onMenuClick() {
     this.setState(prev => {
       return { menuOpened: !prev.menuOpened };
@@ -102,6 +114,12 @@ const mapState = state => ({
   lang: state.lang,
 });
 
-const Container = connect(mapState)(Menu);
+const mapDisptchToProps = dispatch => ({
+  changeLanguage: lang => {
+    dispatch(changeLanguage(lang));
+  },
+});
+
+const Container = connect(mapState, mapDisptchToProps)(Menu);
 
 export default Container;

@@ -1,8 +1,8 @@
-FROM nginx:1
+FROM nginx:stable-alpine
 
-COPY assets /usr/share/nginx/html/assets
-COPY fonts /usr/share/nginx/html/fonts
-COPY dist /usr/share/nginx/html/dist
-COPY *.html /usr/share/nginx/html/
+COPY build /usr/share/nginx/html/
+# COPY fonts /usr/share/nginx/html/fonts
+# COPY dist /usr/share/nginx/html/dist
+# COPY *.html /usr/share/nginx/html/
 
 EXPOSE 80

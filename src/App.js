@@ -1,5 +1,5 @@
 import './App.css';
-
+import React from 'react';
 import Menu from './Components/Menu';
 import BaseInfo from './Components/BaseInfo';
 import Tabs from './Components/Tabs';

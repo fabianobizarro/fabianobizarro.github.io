@@ -6,7 +6,7 @@ const Contact = () => (
       <a
         href="mailto:fabianoasbizarro@gmail.com"
         target="_blank"
-        rel="noopener"
+        rel="noreferrer"
       >
         <i className="fa fa-envelope fa-2x"></i>
       </a>
@@ -18,7 +18,7 @@ const Contact = () => (
       <a
         href="https://github.com/fabianobizarro"
         target="_blank"
-        rel="noopener"
+        rel="noreferrer"
       >
         <i className="fa fa-github fa-2x"></i>
       </a>
@@ -26,7 +26,7 @@ const Contact = () => (
       <a
         href="https://twitter.com/fabianobizarro"
         target="_blank"
-        rel="noopener"
+        rel="noreferrer"
       >
         <i className="fa fa-twitter fa-2x" style={{ color: '#1da1f2' }}></i>
       </a>
@@ -34,7 +34,7 @@ const Contact = () => (
       <a
         href="https://www.linkedin.com/in/fabianobizarro"
         target="_blank"
-        rel="noopener"
+        rel="noreferrer"
       >
         <i className="fa fa-linkedin fa-2x" style={{ color: '#0084bf' }}></i>
       </a>

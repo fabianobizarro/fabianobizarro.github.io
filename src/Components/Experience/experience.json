@@ -1,9 +1,15 @@
 {
     "pt-br": [
         {
+            "title": "Analista de Sistemas Sênior",
+            "company": "Pottencial Seguradora",
+            "period": "fevereiro/2021 - atualmente",
+            "description": ""
+        },
+        {
             "title": "Arquiteto de Software",
             "company": "TODOS Empreendimentos",
-            "period": "março/2020 - atualmente",
+            "period": "março/2020 - fevereiro/2021",
             "description": ""
         },
         {
@@ -39,9 +45,15 @@
     ],
     "en-us": [
         {
+            "title": "Senior Software Developer",
+            "company": "Pottencial Seguradora",
+            "period": "February/2021 - Today",
+            "description": ""
+        },
+        {
             "title": "Software Architect",
             "company": "TODOS Empreendimentos",
-            "period": "March/2020 - Today",
+            "period": "March/2020 - February/2021",
             "description": ""
         },
         {

@@ -2,7 +2,7 @@
   "name": "fabianobizarro.github.io",
   "version": "1.1.0",
   "description": "Meu portólio pessoal",
-  "main": "index.html",
+  "main": "en-us.html",
   "private": false,
   "repository": {
     "type": "git",
@@ -12,7 +12,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src"
   },
   "author": "Fabiano Bizarro",
   "license": "ISC",
@@ -36,7 +37,10 @@
     "snyk": "^1.476.0",
     "web-vitals": "^1.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-plugin-react": "^7.22.0"
+  },
   "snyk": false,
   "eslintConfig": {
     "extends": [
